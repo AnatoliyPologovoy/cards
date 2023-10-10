@@ -12,7 +12,9 @@ export const Decks = () => {
 
   if (data) {
     mappedRow = data.items.map(item => {
-      const updateData = new Date(Date.parse(item.updated)).toLocaleString()
+      const updateData = new Date(Date.parse(item.updated)).toLocaleString('en', {
+        dateStyle: 'short',
+      })
       //TODO remove hours
 
       return (

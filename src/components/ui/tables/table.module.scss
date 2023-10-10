@@ -1,21 +1,27 @@
 @import '../../../styles/mixin';
 
 .table {
-  table-layout: fixed;
-  width: max-content;
-  border: 1px solid var(--color-dark-500);
-  border-collapse: collapse;
   @include typography(var(--font-size-s), var(--font-weight-regular), var(--line-height-m));
+
+  table-layout: fixed;
+  border-collapse: collapse;
+
+  width: max-content;
+
   text-align: left;
+
+  border: 1px solid var(--color-dark-500);
 
   th,
   td {
-    padding: 6px 24px;
-    min-height: 36px;
-    width: min-content;
-    max-height: 60px;
-    overflow-wrap: break-word;
     overflow: hidden;
+
+    width: min-content;
+    min-height: 36px;
+    max-height: 60px;
+    padding: 6px 24px;
+
+    overflow-wrap: break-word;
   }
 
   th {
@@ -69,10 +75,10 @@
 }
 
 .tdIcons {
-  text-align: right;
   display: flex;
-  justify-content: flex-end;
   align-items: center;
+  justify-content: flex-end;
+  text-align: right;
 
   svg {
     cursor: pointer;
@@ -99,9 +105,9 @@
   width: min-content;
 
   .tdCellTitle {
-    width: min-content;
-    max-height: 48px;
     overflow: hidden;
+    width: max-content;
+    max-height: 48px;
   }
 
   .tdCellTitle:nth-child(2) {
