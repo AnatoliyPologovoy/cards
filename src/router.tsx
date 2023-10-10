@@ -6,6 +6,8 @@ import {
   RouterProvider,
 } from 'react-router-dom'
 
+import { Decks } from '@/pages/decks/decks'
+
 const publicRoutes: RouteObject[] = [
   {
     path: '/login',
@@ -24,6 +26,10 @@ const privateRoutes: RouteObject[] = [
     path: '/',
     element: <AccessToPrivateRoutes />,
     children: [
+      {
+        path: '/',
+        element: <Decks />,
+      },
       {
         path: '/deck',
         element: <div>some deck must be here</div>,
