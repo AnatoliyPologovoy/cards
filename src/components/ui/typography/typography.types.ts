@@ -28,7 +28,7 @@ export const tagMapping: TagMapping = {
   subtitle2: 'sub',
   caption: 'p',
   overline: 'span',
-  link1: 'a',
-  link2: 'a',
+  link1: 'span',
+  link2: 'span',
   large: 'h1',
 }

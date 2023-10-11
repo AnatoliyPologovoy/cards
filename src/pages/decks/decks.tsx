@@ -1,14 +1,10 @@
 import s from './deck.module.scss'
 
 import { Table, TdCell, TdIcons, THead, TRow } from '@/components'
-import { useGetMeQuery } from '@/services/auth/auth'
 import { useGetDecksQuery } from '@/services/base-api'
 
 export const Decks = () => {
   const { data } = useGetDecksQuery()
-  const { data: me } = useGetMeQuery()
-
-  console.log(me)
 
   let mappedRow: any[] = []
 

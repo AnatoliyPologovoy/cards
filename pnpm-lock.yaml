@@ -38,9 +38,6 @@ dependencies:
   '@reduxjs/toolkit':
     specifier: ^1.9.6
     version: 1.9.6(react-redux@8.1.2)(react@18.2.0)
-  async-mutex:
-    specifier: ^0.4.0
-    version: 0.4.0
   clsx:
     specifier: ^2.0.0
     version: 2.0.0
@@ -121,6 +118,9 @@ devDependencies:
   '@vitejs/plugin-react':
     specifier: ^4.0.3
     version: 4.0.3(vite@4.4.5)
+  async-mutex:
+    specifier: ^0.4.0
+    version: 0.4.0
   eslint:
     specifier: ^8.45.0
     version: 8.45.0
@@ -4907,7 +4907,7 @@ packages:
     resolution: {integrity: sha512-eJFZ1YhRR8UN8eBLoNzcDPcy/jqjsg6I1AP+KvWQX80BqOSW1oJPJXDylPUEeMr2ZQvHgnQ//Lp6f3RQ1zI7HA==}
     dependencies:
       tslib: 2.6.1
-    dev: false
+    dev: true
 
   /async@3.2.4:
     resolution: {integrity: sha512-iAB+JbDEGXhyIUavoDl9WP/Jj106Kz9DEn1DPgYw5ruDn0e3Wgi3sKFm55sASdGBNOQB8F59d9qQ7deqrHA8wQ==}

@@ -1,16 +1,11 @@
-import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
+import { createApi } from '@reduxjs/toolkit/query/react'
 
 import { DecksResponse } from '@/services/api-types.ts'
+import { baseQueryWithReAuth } from '@/services/base-query-re-authorization.ts'
 
 export const baseApi = createApi({
   reducerPath: 'baseApi',
-  baseQuery: fetchBaseQuery({
-    baseUrl: 'https://api.flashcards.andrii.es',
-    credentials: 'include',
-    prepareHeaders: headers => {
-      headers.append('x-auth-skip', 'true')
-    },
-  }),
+  baseQuery: baseQueryWithReAuth,
   endpoints: builder => {
     return {
       getDecks: builder.query<DecksResponse, void>({
@@ -21,3 +16,11 @@ export const baseApi = createApi({
 })
 
 export const { useGetDecksQuery } = baseApi
+
+// baseQuery: fetchBaseQuery({
+//   baseUrl: 'https://api.flashcards.andrii.es',
+//   credentials: 'include',
+//   prepareHeaders: headers => {
+//     headers.append('x-auth-skip', 'true')
+//   },
+// }),
