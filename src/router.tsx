@@ -20,6 +20,10 @@ const publicRoutes: RouteObject[] = [
     path: '/sign-up',
     element: <SignUpPage />,
   },
+  {
+    path: '/reset-password',
+    element: <div>Reset password must be here</div>,
+  },
 ]
 
 const AccessToPrivateRoutes = () => {

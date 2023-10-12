@@ -7,9 +7,9 @@ import s from '../forms.module.scss'
 
 import { signUpSchema } from '@/common/utils'
 import { FormPropsType, MainFormType } from '@/components'
-import { SingUpArgs } from '@/services/auth/auth.types.ts'
+import { SignUpArgs } from '@/services/auth/auth.types.ts'
 
-export const SignUp = ({ onSubmit }: FormPropsType<SingUpArgs>) => {
+export const SignUp = ({ onSubmit }: FormPropsType<SignUpArgs>) => {
   const {
     register,
     handleSubmit,
