@@ -10,9 +10,11 @@ export const baseApi = createApi({
     return {
       getDecks: builder.query<DecksResponse, void>({
         query: () => `v1/decks`,
+        providesTags: ['DECKS'],
       }),
     }
   },
+  tagTypes: ['ME', 'DECKS'],
 })
 
 export const { useGetDecksQuery } = baseApi

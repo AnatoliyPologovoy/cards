@@ -28,11 +28,7 @@ export type SignUpArgs = {
 }
 
 export type SignUpResponse = {
-  avatar: string
-  id: string
-  email: string
-  isEmailVerified: boolean
   name: string
-  created: string
-  updated: string
+  email: string
+  id: string
 }

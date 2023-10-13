@@ -1,10 +1,12 @@
 import s from './deck.module.scss'
 
-import { Table, TdCell, TdIcons, THead, TRow } from '@/components'
+import { Button, Table, TdCell, TdIcons, THead, TRow } from '@/components'
+import { useLogOutMutation } from '@/services/auth/auth.ts'
 import { useGetDecksQuery } from '@/services/base-api'
 
 export const Decks = () => {
   const { data } = useGetDecksQuery()
+  const [logout] = useLogOutMutation()
 
   let mappedRow: any[] = []
 
@@ -32,6 +34,9 @@ export const Decks = () => {
 
   return (
     <div className={s.pageWrapper}>
+      <Button variant={'secondary'} onClick={() => logout()}>
+        Logout
+      </Button>
       <Table variant={'packs'}>
         <THead columns={['Name', 'Cards', 'LastUpdate', 'Created by', '']} />
         <tbody>{mappedRow}</tbody>
