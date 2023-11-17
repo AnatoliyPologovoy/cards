@@ -3,7 +3,7 @@ import { any, z } from 'zod'
 const zEmail = z.string().email()
 const zPassword = z
   .string()
-  .min(6, { message: 'Password should be at least 6 characters' })
+  .min(3, { message: 'Password should be at least 3 characters' })
   .max(30, { message: 'Password should be not more 30 characters' })
 
 export const signInSchema = z.object({
